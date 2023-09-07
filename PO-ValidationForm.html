@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        section div {
+            /* border: 2px solid black; */
+            /* height: 50px; */
+        }
+
+        #form {
+            width: 50%;
+        }
+
+        form {
+            width: 95%;
+            /* background-color:rgb(250, 243, 243); */
+
+        }
+
+        #table {
+            width: 50%;
+        }
+
+        table {
+            margin-left: 100px;
+            /* width: 70%; */
+        }
+        @media screen and (max-width:800px) {
+            section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        #form{
+            width: 100%;
+
+        }
+        #table{
+            width: 100%;
+
+        }
+
+            
+        }
+
+
+        /* #table tr,th,td{border: 2px solid black;} */
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <section>
+
+        <div id="form" class="p-5">
+
+            <h1 class="text-center text-success ps-3">PO Details Task</h1>
+            <h3 id="warning" class="text-danger text-center"></h3>
+            <form action="" class="p-3 needs-validation bg-light" onsubmit="return Validations()">
+                <div class="mt-3 p-2">
+                    <label for="" class="form-label ">Supplier Name:</label>
+                    <input type="text" name="" id="username" class="form-control" placeholder="Enter Name" autocomplete="off">
+                </div>
+                <div class=" mt-3 p-2">
+
+                    <label for="" class="form-label">PO Amt:</label>
+                    <input type="text" name="" id="amount" class="form-control" placeholder="Enter PO Value">
+                    
+                </div>
+                <div class="mt-3 p-2">
+
+                    <label for="" class="form-label">Re-Enter PO Amt:</label>
+                    <input type="text" name="" id="ramount" class="form-control" placeholder="Repeat PO Value" >
+                </div>
+                <div class=" mt-3 p-2">
+
+                    
+                    <label for="" class="form-label">Paid Amt:</label>
+                    <input type="text" name="" id="paid" class="form-control" placeholder="Enter Paid Amount" >
+                </div>
+                <div class=" mt-3 p-2">
+
+                    
+                    <label for="" class="form-label">Balance amount:(Po/Paid Amt)</label>
+                    <input type="text" name="" id="balance"  class="form-control">
+                </div>
+                <div class=" mt-3 p-2">
+
+                    
+                    <label for="" class="form-label">Status:</label>
+                    <input type="text" name="" id="status" class="form-control" value="Failed">
+                </div>
+                    <div class="clearfix">
+
+                    <input type="button" value="validate" class="btn btn-primary mt-3 mx-5 float-start"
+                         id="vbtn">
+                    <input type="submit" value="submit" class="btn btn-success mt-3  mx-5 float-end"   id="resubmit">
+                </div>
+            </form>
+        </div>
+        <div id="table">
+            <table class="table m-5">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>PO Value</th>
+                        <th>PO Amount</th>
+                        <th>Bal Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">  
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <script src="K_S-Project1.js"></script>
+</body>
+</html>
