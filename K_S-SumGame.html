@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        body{
+            background-color:rgb(58, 58, 90);
+        }
+        #main{
+            border: 2px solid black;
+            background-color: white;
+            width: 300px;
+            height: 200px;
+            /* z-index: -2; */
+            /* background-color: red;*/
+
+        
+            margin-top: 15%;
+            margin-left: 40%;
+            position: relative;
+        } 
+        input[type=text]{
+            margin-right: 5%;
+            margin-bottom: 5%;
+
+        }
+        #container1{
+            /* z-index: 1; */
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+
+            margin: 0%;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+
+
+        <div id="container1">
+            <p >Your Score: <span id="score"> </span></p>
+            <p >What will be the sum of <span id=
+                "num1"></span>+<span id="num2"></span>?</p>
+                <form id="Myform">
+                <input type="text" id="check" value=""><button id="result">check</button>
+                </form>
+            </div>
+            </div>
+            <script>
+                let   num1="num1";
+      let   num2= "num2";
+      let a=0;
+        y=Math.floor(Math.random()*10)+5;
+        x=Math.floor(Math.random()*10)+5;
+      let z= x+y;
+      localStorage.setItem(num1,x)
+     localStorage.setItem(num2,y)
+
+        //  document.write(z);
+        document.getElementById("num1").innerHTML=x;
+        document.getElementById("num2").innerHTML=y;
+        document.getElementById("score").innerHTML=a;
+        
+       
+function Sum() {
+    
+       let check= document.getElementById("check").value;
+    if (check==(x+y)) {
+
+        document.getElementById("score").innerHTML=a=a+1;
+        console.log(check);
+        document.getElementById("Myform").reset();
+        
+        x++;
+        y++;
+
+        
+        document.getElementById("num1").innerHTML=x;
+        document.getElementById("num2").innerHTML=y;
+
+        localStorage.setItem(num1,x)
+     localStorage.setItem(num2,y)
+     event.preventDefault();
+
+        
+
+         }
+         else{
+            document.getElementById("main").style.cssText="background-color: red; border:2px solid white ; padding:3% ;color:white";
+            
+
+            
+            let element=document.getElementById("main").innerHTML="Your Score is "+a;
+        
+            document.getElementById("container1").style.display="none"
+
+         }
+
+}
+document.getElementsByTagName("button")[0].addEventListener("click",Sum)
+;
+
+       
+      
+    </script>
+
+    
+</body>
+</html>
