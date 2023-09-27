@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 100vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    fieldset {
+        height: 15%;
+        margin-bottom: 7%;
+    }
+
+    fieldset button {
+        height: 70%;
+        width: 20%;
+        margin-top: 1%
+    }
+
+    fieldset select {
+        height: 70%;
+        width: 35%;
+        margin-top: 1%;
+    }
+
+    #list {
+        font-size: xx-large;
+    }
+    abbr{
+        outline-style: none;
+        text-decoration: none;
+    }
+    @media screen and (max-width:500px) {
+        fieldset button {
+            font-size: 70%;
+            padding-left: 0%;
+            margin-right: 0%;
+            padding: 0%;
+            margin: 0%;
+    }
+    fieldset select  {            font-size: 70%;
+
+    }
+        
+    }
+</style>
+
+<body>
+    <div id="main">
+        <h1>Play With Array By Kahekashan Saher</h1>
+        <fieldset id="FirstField">
+            <legend>Add Items</legend>
+            <button value="push">Push</button>
+            <button value="unshift">Unshift</button>
+            <button><abbr title="Please Select the position first ">InsertAt</abbr></button>
+            <select name="" id="">
+                <option value="0">Select position</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Remove Items</legend>
+            <button>Pop</button>
+            <button>Shift</button>
+            <button>
+                <abbr title="Select the posiotion"><abbr title="Please Select the position first ">RemoveAt</abbr></abbr>
+            </button>
+            <select name="" id="">
+                <option value="0">Select position</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+
+        </fieldset>
+        <section id="list"></section>
+
+
+
+    </div>
+    <script src="K_S-ArrayGame.js"></script>
+
+</body>
+
+</html>
